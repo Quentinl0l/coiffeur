@@ -1,0 +1,137 @@
+/* Général */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fefefe;
+    color: #9f9f9f;
+}
+
+/* En-tête */
+header {
+    background-color: #9f9f9f;
+    padding: 1em;
+    text-align: center;
+}
+
+header img {
+    width: 100%;
+    max-width: 200px; /* limite la taille */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
+/* Titre principal */
+
+main h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 1em;
+}
+
+/* Description */
+main > p {
+    text-align: center;
+    font-size: 1.1em;
+    margin: 0.5em auto;
+    max-width: 800px;
+}
+
+/* Horaires & Tarifs */
+
+#main{
+    display: none;
+}
+
+#main.active {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em auto;
+    flex-wrap: wrap;
+    gap: 2em;
+    max-width: 900px;
+}
+
+#main section {
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+#main nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#main nav ul li {
+    padding: 0.3em 0;
+}
+
+/* Pied de page */
+footer {
+    background-color: #9f9f9f;
+    color: white;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1em;
+}
+
+footer #coo, footer #reseaux {
+    flex: 1 1 300px;
+}
+
+footer a img {
+    width: 70px;
+    margin: 0 0.5em;
+    transition: transform 0.3s;
+}
+
+footer a img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Responsive layout for horaires/tarifs and footer */
+@media screen and (max-width: 768px) {
+    #main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer #coo, footer #reseaux {
+        flex: none;
+        width: 100%;
+    }
+
+    main h1 {
+        font-size: 1.5em;
+    }
+
+    main > p {
+        font-size: 1em;
+        padding: 0 1em;
+    }
+
+    #main section {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header img {
+        max-width: 90%;
+    }
+}
