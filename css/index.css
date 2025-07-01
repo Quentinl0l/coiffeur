@@ -4,6 +4,14 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fefefe;
     color: #9f9f9f;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* En-tête */
@@ -41,8 +49,11 @@ main > p {
 
 /* Horaires & Tarifs */
 
-#main{
+main {
     display: none;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-bottom: 2em; /* pour éviter que le footer colle */
 }
 
 #main.active {
@@ -81,6 +92,7 @@ footer {
     flex-wrap: wrap;
     text-align: center;
     gap: 1em;
+    margin-top: auto;
 }
 
 footer #coo, footer #reseaux {
